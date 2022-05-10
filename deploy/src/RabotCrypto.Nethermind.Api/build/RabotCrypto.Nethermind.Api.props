@@ -1,0 +1,7 @@
+<Project>
+  <ItemGroup>
+    <Reference Include="$(MSBuildThisFileDirectory)../lib/net6.0/*.dll">
+      <HintPath>%(Identity)</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

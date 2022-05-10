@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ArtifactsPath>$(MSBuildProjectDirectory)/bin/Publish</ArtifactsPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Api/Nethermind.Api.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Artifacts" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

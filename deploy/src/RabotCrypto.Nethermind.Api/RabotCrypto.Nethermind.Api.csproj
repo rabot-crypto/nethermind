@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!-- Do not let Vernuntii set assembly version. -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <DevelopmentDependency>true</DevelopmentDependency>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../RabotCrypto.Nethermind.Api.Artifacts/RabotCrypto.Nethermind.Api.Artifacts.csproj">
+      <!-- Setting ReferenceOutputAssembly=false skips adding the outputs of the referenced project to an item -->
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <!-- Setting SkipGetTargetFrameworkProperties skips target framework cross-project validation in NuGet -->
+      <OutputItemType>None</OutputItemType>
+      <!-- Disable TargetFramework resolution in scope of THIS project but not in the scope of target project -->
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+      <!-- Specify below only when target project has more than one target frameworks -->
+      <!--<AdditionalProperties>TargetFramework=specify desired target here</AdditionalProperties>-->
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vernuntii.Console.MSBuild" Version="0.1.0-alpha.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Target Name="_IncludeNethermindApiPackages" BeforeTargets="CollectPackageReferences">
+    <PropertyGroup>
+      <NethermindApiPackages>obj/Nethermind.Api.g.props</NethermindApiPackages>
+    </PropertyGroup>
+
+    <MSBuild Projects="../../../src/Nethermind/Nethermind.Api/Nethermind.Api.csproj" Targets="Restore" />
+    <Exec Command="dotnet script ../RabotCrypto.ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Api/obj/project.assets.json $(NethermindApiPackages)" />
+
+    <!-- As we can not import dynamically the .props with the packages inside we use this as workaround -->
+    <MSBuild Projects="./Utilities.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(NethermindApiPackages)">
+      <Output TaskParameter="TargetOutputs" ItemName="_NethermindApiPackageReferences" />
+    </MSBuild>
+
+    <ItemGroup>
+      <PackageReference Include="@(_NethermindApiPackageReferences)" />
+    </ItemGroup>
+
+    <!-- For debug purpose -->
+    <!-- <Message Importance="High" Text="%(PackageReference.Identity)" /> -->
+  </Target>
+
+  <ItemGroup>
+    <None Include="../RabotCrypto.Nethermind.Api.Artifacts/bin/Publish/publish/**/*">
+      <Pack>true</Pack>
+      <PackagePath>lib\net6.0\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)build/**/*">
+      <Pack>true</Pack>
+      <PackagePath>build\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
