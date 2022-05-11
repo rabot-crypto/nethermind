@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../RabotCrypto.Nethermind.Api.Artifacts/RabotCrypto.Nethermind.Api.Artifacts.csproj">
+    <ProjectReference Include="../RabotCrypto.Nethermind.Db.Rocks.Artifacts/RabotCrypto.Nethermind.Db.Rocks.Artifacts.csproj">
       <!-- Setting ReferenceOutputAssembly=false skips adding the outputs of the referenced project to an item -->
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <!-- Setting SkipGetTargetFrameworkProperties skips target framework cross-project validation in NuGet -->
@@ -29,11 +29,11 @@
 
   <Target Name="_IncludeNethermindApiPackages" BeforeTargets="CollectPackageReferences">
     <PropertyGroup>
-      <NethermindApiPackages>$(MSBuildThisFileDirectory)obj/Nethermind.Api.g.props</NethermindApiPackages>
+      <NethermindApiPackages>$(MSBuildThisFileDirectory)obj/Nethermind.Db.Rocks.g.props</NethermindApiPackages>
     </PropertyGroup>
 
-    <MSBuild Projects="../../../src/Nethermind/Nethermind.Api/Nethermind.Api.csproj" Targets="Restore" />
-    <Exec Command="dotnet script ../RabotCrypto.ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Api/obj/project.assets.json $(NethermindApiPackages)" />
+    <MSBuild Projects="../../../src/Nethermind/Nethermind.Db.Rocks/Nethermind.Db.Rocks.csproj" Targets="Restore" />
+    <Exec Command="dotnet script ../RabotCrypto.ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Db.Rocks/obj/project.assets.json $(NethermindApiPackages)" />
 
     <!-- As we can not import dynamically the .props with the packages inside we use this as workaround -->
     <MSBuild Projects="../RabotCrypto.ImportableExternalPackages/Utilities.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(NethermindApiPackages)">
@@ -49,7 +49,7 @@
   </Target>
 
   <ItemGroup>
-    <None Include="../RabotCrypto.Nethermind.Api.Artifacts/bin/Publish/publish/*">
+    <None Include="../RabotCrypto.Nethermind.Db.Rocks.Artifacts/bin/Publish/*">
       <Pack>true</Pack>
       <PackagePath>lib\net6.0\</PackagePath>
     </None>

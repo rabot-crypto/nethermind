@@ -42,6 +42,15 @@ project.ItemGroupCollection = itemGroupCollection;
 
 var projectJson = JsonConvert.SerializeObject(project);
 var projectXmlDocument = JsonConvert.DeserializeXmlNode(projectJson, nameof(Project));
+
+// Make sure directory for output does exist.
+var directoryPath = Path.GetDirectoryName(packagesOutputPath);
+
+if (!Directory.Exists(directoryPath))
+{
+    Directory.CreateDirectory(directoryPath);
+}
+
 File.WriteAllText(packagesOutputPath, projectXmlDocument.OuterXml);
 
 class Project

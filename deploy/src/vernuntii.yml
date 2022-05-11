@@ -1,1 +1,4 @@
+VersioningMode: 
+  Preset: ContinousDelivery
+  MessageConvention: Manual
 PreRelease: alpha
