@@ -7,6 +7,12 @@
       "commands": [
         "dotnet-script"
       ]
+    },
+    "vernuntii.console.globaltool": {
+      "version": "0.1.0-alpha.10",
+      "commands": [
+        "vernuntii"
+      ]
     }
   }
 }
