@@ -14,7 +14,11 @@
     <None Include="@(_BuildFile)">
       <Link>$(MSBuildProjectDirectory)/build/$(PackageId)%(Extension)</Link>
       <Pack>true</Pack>
-      <PackagePath>build/$(PackageId)%(Extension);buildMultiTargeting/$(PackageId)%(Extension)</PackagePath>
+      <PackagePath>
+        build/$(PackageId)%(Extension);
+        buildMultiTargeting/$(PackageId)%(Extension);
+        buildTransitive/$(PackageId)%(Extension)
+      </PackagePath>
     </None>
   </ItemGroup>
 </Project>
