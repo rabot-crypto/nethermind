@@ -1,2 +1,4 @@
-VersioningMode: ContinousDelivery
+VersioningMode:
+  Preset: ContinousDelivery
+  MessageConvention: Manual
 PreRelease: rabot
