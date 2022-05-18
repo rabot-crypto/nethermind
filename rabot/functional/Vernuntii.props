@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Vernuntii-agnostic. -->
+    <VernuntiiConfigPath>$(MSBuildThisFileDirectory)vernuntii.yml</VernuntiiConfigPath>
+  </PropertyGroup>
+</Project>

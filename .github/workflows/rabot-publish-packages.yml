@@ -27,19 +27,8 @@ jobs:
 
       - run: dotnet nuget add source "${{ secrets.SPACE_NUGET_SOURCE }}" --username "${{ secrets.SPACE_NUGET_USERNAME }}" --password "${{ secrets.SPACE_NUGET_PASSWORD}}" --store-password-in-clear-text
 
-      - name: Execute Vernuntii
-        uses: vernuntii/actions/execute@main
-        with:
-          config-path: ./rabot
-          duplicate-version-fails: true
-
       - run: ./scripts/publish-package.sh
         env:
           NUGET_SOURCE: ${{ secrets.SPACE_NUGET_SOURCE }}
         working-directory: ./rabot
-        shell: bash
-
-      - run: |
-          git tag "${{ env.Vernuntii_SemanticVersion }}"
-          git push --tags
         shell: bash

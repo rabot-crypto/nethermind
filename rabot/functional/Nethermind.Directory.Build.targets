@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)../tasks/Vernuntii.targets" Condition="'$(UseVernuntii)' == 'true'" />
+  <Import Project="$(MSBuildThisFileDirectory)RecursivePackable.targets" />
+</Project>

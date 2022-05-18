@@ -1,0 +1,5 @@
+GitVersion: ../../
+VersioningMode:
+  Preset: ContinousDelivery
+  MessageConvention: Manual
+PreRelease: binding

@@ -4,8 +4,4 @@
     <PackageId Condition="'$(PackageId)' != ''">RabotCrypto.$(PackageId)</PackageId>
     <PackageId Condition="'$(PackageId)' == ''">RabotCrypto.$(MSBuildProjectName)</PackageId>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <UseVernuntii>true</UseVernuntii>
-  </PropertyGroup>
 </Project>

@@ -1,4 +1,3 @@
 <Project>
-  <Import Project="../rabot/tasks/Vernuntii.props" />
-  <Import Project="../rabot/tasks/RecursivePackable.props" />
+  <Import Project="../rabot/functional/Nethermind.Directory.Build.props" />
 </Project>

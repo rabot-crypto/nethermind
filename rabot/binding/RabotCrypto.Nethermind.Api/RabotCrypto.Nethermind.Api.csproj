@@ -20,12 +20,7 @@
     </ProjectReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Vernuntii.Console.MSBuild" Version="0.1.0-alpha.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)../../tasks/Vernuntii.targets" />
 
   <Target Name="_IncludeNethermindApiPackages" BeforeTargets="CollectPackageReferences">
     <PropertyGroup>

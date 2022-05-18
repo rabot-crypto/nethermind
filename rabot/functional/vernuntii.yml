@@ -1,4 +1,5 @@
+GitVersion: ../../
 VersioningMode:
   Preset: ContinousDelivery
   MessageConvention: Manual
-PreRelease: rabot
+PreRelease: functional

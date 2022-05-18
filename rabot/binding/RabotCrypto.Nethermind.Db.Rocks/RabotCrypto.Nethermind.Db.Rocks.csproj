@@ -19,13 +19,8 @@
       <!--<AdditionalProperties>TargetFramework=specify desired target here</AdditionalProperties>-->
     </ProjectReference>
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Vernuntii.Console.MSBuild" Version="0.1.0-alpha.9">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+  
+  <Import Project="$(MSBuildThisFileDirectory)../../tasks/Vernuntii.targets" />
 
   <Target Name="_IncludeNethermindApiPackages" BeforeTargets="CollectPackageReferences">
     <PropertyGroup>
@@ -49,7 +44,7 @@
   </Target>
 
   <ItemGroup>
-    <None Include="../RabotCrypto.Nethermind.Db.Rocks.Artifacts/bin/Publish/*">
+    <None Include="../RabotCrypto.Nethermind.Db.Rocks.Artifacts/bin/Publish/publish/*">
       <Pack>true</Pack>
       <PackagePath>lib\net6.0\</PackagePath>
     </None>
