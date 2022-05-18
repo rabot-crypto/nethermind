@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../../../src/Nethermind/Nethermind.Db.Rocks/Nethermind.Db.Rocks.csproj">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>

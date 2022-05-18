@@ -1,16 +1,23 @@
 #!/bin/bash
 
-# This script is intended to be called in /rabot/
+# This script is intended to be called in ../
 
 set -e
 
-VERSION=$(vernuntii)
+BINDING_DIR="binding"
+OFFICALS_DIR="officials"
+ARTIFACTS_DIR="artifacts"
+
 CONFIGURATION=Release
 
-dotnet pack -c $CONFIGURATION "src/RabotCrypto.Nethermind.Api"
-dotnet pack -c $CONFIGURATION "src/RabotCrypto.Nethermind.Db.Rocks"
+# Pack projects for only binding purposes e.g. writing plugins
+dotnet pack -c $CONFIGURATION "$BINDING_DIR/RabotCrypto.Nethermind.Api"
+dotnet pack -c $CONFIGURATION "$BINDING_DIR/RabotCrypto.Nethermind.Db.Rocks"
 
-dotnet nuget push "src/RabotCrypto.Nethermind.Api/bin/Release/RabotCrypto.Nethermind.Api.$VERSION.nupkg" --source "$NUGET_SOURCE"
-dotnet nuget push "src/RabotCrypto.Nethermind.Db.Rocks/bin/Release/RabotCrypto.Nethermind.Db.Rocks.$VERSION.nupkg" --source "$NUGET_SOURCE"
+# Pack fully functional projects
+dotnet msbuild "$OFFICALS_DIR/RecursivePacker" -p:Configuration=$CONFIGURATION
 
-echo "The packages has been published."
+# Push created packages
+find $ARTIFACTS_DIR -name "*.nupkg" -exec dotnet nuget push {} --source "$NUGET_SOURCE" \;
+
+echo "The packages have been published."

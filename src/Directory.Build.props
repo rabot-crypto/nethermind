@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="../rabot/tasks/Vernuntii.props" />
+  <Import Project="../rabot/tasks/RecursivePackable.props" />
+</Project>

@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="../rabot/tasks/Vernuntii.targets" />
+  <Import Project="../rabot/tasks/RecursivePackable.targets" />
+</Project>

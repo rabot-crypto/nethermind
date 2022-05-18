@@ -33,10 +33,10 @@
     </PropertyGroup>
 
     <MSBuild Projects="../../../src/Nethermind/Nethermind.Db.Rocks/Nethermind.Db.Rocks.csproj" Targets="Restore" />
-    <Exec Command="dotnet script ../RabotCrypto.ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Db.Rocks/obj/project.assets.json $(NethermindApiPackages)" />
+    <Exec Command="dotnet script ../ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Db.Rocks/obj/project.assets.json $(NethermindApiPackages)" />
 
     <!-- As we can not import dynamically the .props with the packages inside we use this as workaround -->
-    <MSBuild Projects="../RabotCrypto.ImportableExternalPackages/Utilities.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(NethermindApiPackages)">
+    <MSBuild Projects="../ImportableExternalPackages/Utilities.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(NethermindApiPackages)">
       <Output TaskParameter="TargetOutputs" ItemName="_NethermindApiPackageReferences" />
     </MSBuild>
 

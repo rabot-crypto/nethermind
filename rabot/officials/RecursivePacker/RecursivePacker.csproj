@@ -1,0 +1,29 @@
+<Project DefaultTargets="RecursivePack">
+  <Sdk Name="Microsoft.Build.NoTargets" Version="3.4.0" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm/Nethermind.Evm.csproj" />
+  </ItemGroup>
+
+  <Target Name="RecursivePack" DependsOnTargets="Restore;Build">
+    <ItemGroup>
+      <_ProjectToPack Include="%(_RestoreProjectPathItems.Identity)" Exclude="$(MSBuildProjectFullPath)" />
+    </ItemGroup>
+
+    <PropertyGroup>
+      <!-- TreatWarningsAsErrors is here very important! -->
+      <MSBuildProperties>
+        PackageOutputPath=$(PackageOutputPath);
+        TreatWarningsAsErrors=false
+      </MSBuildProperties>
+    </PropertyGroup>
+
+    <MSBuild Projects="%(_ProjectToPack.Identity)" Targets="Pack" Properties="$(MSBuildProperties)" />
+    <!-- <Message Text="%(_ProjectToPack.Identity)" Importance="High" /> -->
+  </Target>
+
+</Project>

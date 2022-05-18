@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <Reference Include="$(MSBuildThisFileDirectory)../lib/net6.0/*.dll">
+    <Reference Include="$(MSBuildThisFileDirectory)../lib/net6.0/*.dll" Exclude="%(RelativeDir)%(Reference.Filename)%(Reference.Extension)">
       <HintPath>%(Identity)</HintPath>
       <!-- Using <Private>false</Private> keeps the dependencies from being copied over. -->
       <Private>false</Private>
