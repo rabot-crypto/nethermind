@@ -2,5 +2,6 @@
   <PropertyGroup>
     <!-- Vernuntii-agnostic. -->
     <VernuntiiConfigPath>$(MSBuildThisFileDirectory)vernuntii.yml</VernuntiiConfigPath>
+    <VernuntiiCacheId>binding</VernuntiiCacheId>
   </PropertyGroup>
 </Project>

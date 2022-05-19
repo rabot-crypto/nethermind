@@ -22,38 +22,24 @@
 
   <Import Project="$(MSBuildThisFileDirectory)../../tasks/Vernuntii.targets" />
 
-  <Target Name="_IncludeNethermindApiPackages" BeforeTargets="CollectPackageReferences">
-    <PropertyGroup>
-      <NethermindApiPackages>$(MSBuildThisFileDirectory)obj/Nethermind.Api.g.props</NethermindApiPackages>
-    </PropertyGroup>
+  <PropertyGroup>
+    <ExternalProjectDirectory>$(MSBuildThisFileDirectory)../../../src/Nethermind/Nethermind.Api/</ExternalProjectDirectory>
+    <ExternalProjectName>Nethermind.Api</ExternalProjectName>
+  </PropertyGroup>
 
-    <MSBuild Projects="../../../src/Nethermind/Nethermind.Api/Nethermind.Api.csproj" Targets="Restore" />
-    <Exec Command="dotnet script ../ImportableExternalPackages/main.csx -- ../../../src/Nethermind/Nethermind.Api/obj/project.assets.json $(NethermindApiPackages)" />
-
-    <!-- As we can not import dynamically the .props with the packages inside we use this as workaround -->
-    <MSBuild Projects="../ImportableExternalPackages/Utilities.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(NethermindApiPackages)">
-      <Output TaskParameter="TargetOutputs" ItemName="_NethermindApiPackageReferences" />
-    </MSBuild>
-
-    <ItemGroup>
-      <PackageReference Include="@(_NethermindApiPackageReferences)" />
-    </ItemGroup>
-
-    <!-- For debug purpose -->
-    <!-- <Message Importance="High" Text="%(PackageReference.Identity)" /> -->
-  </Target>
+  <Import Project="$(MSBuildThisFileDirectory)../../tasks/ExternalProjectPackages.targets" />
 
   <ItemGroup>
-    <None Include="../RabotCrypto.Nethermind.Api.Artifacts/bin/Publish/publish/*">
+    <None Include="$(MSBuildThisFileDirectory)../RabotCrypto.Nethermind.Api.Artifacts/bin/Release/$(TargetFramework)/*.dll">
       <Pack>true</Pack>
-      <PackagePath>lib\net6.0\</PackagePath>
+      <PackagePath>lib\net6.0</PackagePath>
     </None>
   </ItemGroup>
 
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)build/**/*">
       <Pack>true</Pack>
-      <PackagePath>build\</PackagePath>
+      <PackagePath>build;buildMultiTargeting</PackagePath>
     </None>
   </ItemGroup>
 
