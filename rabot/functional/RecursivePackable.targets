@@ -1,10 +1,18 @@
 <Project>
+  <Import Project="$(MSBuildThisFileDirectory)Vernuntii.props" />
+  <Import Project="$(MSBuildThisFileDirectory)../tasks/Vernuntii.Package.targets" />
+  
+  <PropertyGroup>
+    <PackageId Condition="'$(PackageId)' != ''">RabotCrypto.$(PackageId)</PackageId>
+    <PackageId Condition="'$(PackageId)' == ''">RabotCrypto.$(MSBuildProjectName)</PackageId>
+  </PropertyGroup>
+  
   <ItemGroup>
     <_ContentDir Include="@(Content->'%(RootDir)%(Directory)'->Distinct())" />
   </ItemGroup>
 
   <ItemGroup Condition="@(_ContentDir->Count()) > 0">
-    <_BuildFile Include="$(MSBuildThisFileDirectory)PackageContentBinding.targets" />
+    <_BuildFile Include="$(MSBuildThisFileDirectory)../packable/LinkPackageContent.targets" />
 
     <Content Update="@(Content)">
       <Pack>true</Pack>

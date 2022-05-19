@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <RecursivePackableCommonPropsLoaded>true</RecursivePackableCommonPropsLoaded>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RecursivePackableTargetsLockFile>$(MSBuildThisFileDirectory)RecursivePackable.lock</RecursivePackableTargetsLockFile>
+  </PropertyGroup>
+</Project>

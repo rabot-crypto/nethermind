@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-      <ExternalProjectPackages>$(MSBuildThisFileDirectory)obj/$(ExternalProjectName).g.props</ExternalProjectPackages>
+      <ExternalProjectPackages>$(MSBuildProjectDirectory)/obj/$(ExternalProjectName).$(MSBuildThisFileName).props</ExternalProjectPackages>
     </PropertyGroup>
 
     <MSBuild Projects="$(_ExternalProjectReference)" Targets="Restore" />

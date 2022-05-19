@@ -1,8 +1,3 @@
 <Project>
-  <Import Project="$(MSBuildThisFileDirectory)Vernuntii.props" />
   <Import Project="$(MSBuildThisFileDirectory)RecursivePackable.props" />
-
-  <PropertyGroup>
-    <UseVernuntii>true</UseVernuntii>
-  </PropertyGroup>
 </Project>

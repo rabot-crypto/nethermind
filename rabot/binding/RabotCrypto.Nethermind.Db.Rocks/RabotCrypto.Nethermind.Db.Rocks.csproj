@@ -2,45 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <!-- Do not let Vernuntii set assembly version. -->
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <DevelopmentDependency>true</DevelopmentDependency>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../RabotCrypto.Nethermind.Db.Rocks.Artifacts/RabotCrypto.Nethermind.Db.Rocks.Artifacts.csproj">
-      <!-- Setting ReferenceOutputAssembly=false skips adding the outputs of the referenced project to an item -->
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <!-- Setting SkipGetTargetFrameworkProperties skips target framework cross-project validation in NuGet -->
-      <OutputItemType>None</OutputItemType>
-      <!-- Disable TargetFramework resolution in scope of THIS project but not in the scope of target project -->
-      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
-      <!-- Specify below only when target project has more than one target frameworks -->
-      <!--<AdditionalProperties>TargetFramework=specify desired target here</AdditionalProperties>-->
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Db.Rocks/Nethermind.Db.Rocks.csproj">
+      <!-- Prevents this project being listed as package dependency inside built package -->
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
-  
-  <Import Project="$(MSBuildThisFileDirectory)../../tasks/Vernuntii.targets" />
   
   <PropertyGroup>
     <ExternalProjectDirectory>$(MSBuildThisFileDirectory)../../../src/Nethermind/Nethermind.Db.Rocks/</ExternalProjectDirectory>
     <ExternalProjectName>Nethermind.Db.Rocks</ExternalProjectName>
   </PropertyGroup>
 
-  <Import Project="$(MSBuildThisFileDirectory)../../tasks/ExternalProjectPackages.targets" />
-
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)../RabotCrypto.Nethermind.Db.Rocks.Artifacts/bin/Release/$(TargetFramework)/*.dll">
-      <Pack>true</Pack>
-      <PackagePath>lib\net6.0</PackagePath>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)build/**/*">
-      <Pack>true</Pack>
-      <PackagePath>build;buildMultiTargeting</PackagePath>
-    </None>
-  </ItemGroup>
-
+  <Import Project="$(MSBuildThisFileDirectory)../BindablePackage.targets" />
 </Project>

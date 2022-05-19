@@ -1,4 +1,4 @@
 <Project>
-  <Import Project="$(MSBuildThisFileDirectory)../tasks/Vernuntii.targets" Condition="'$(UseVernuntii)' == 'true'" />
-  <Import Project="$(MSBuildThisFileDirectory)RecursivePackable.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)RecursivePackable.Common.props" Condition="'$(RecursivePackableCommonPropsLoaded)' != 'true'" />
+  <Import Project="$(MSBuildThisFileDirectory)RecursivePackable.targets" Condition="Exists('$(RecursivePackableTargetsLockFile)')" />
 </Project>

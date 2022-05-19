@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <BindablePackagePropsLoaded>true</BindablePackagePropsLoaded>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <!-- Do not let Vernuntii set assembly version. -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)../packable/ReferencePackageLibraries.props">
+      <Link>$(MSBuildProjectDirectory)/build/$(MSBuildProjectName)%(Extension)</Link>
+      <Pack>true</Pack>
+      <PackagePath>
+        build/$(MSBuildProjectName)%(Extension);
+        buildMultiTargeting/$(MSBuildProjectName)%(Extension)
+      </PackagePath>
+    </None>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)Vernuntii.props" />
+</Project>

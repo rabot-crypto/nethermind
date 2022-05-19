@@ -1,7 +1,2 @@
 <Project>
-  <!-- These properties prevents to reserve the package names by their legal owners - Nethermind. -->
-  <PropertyGroup>
-    <PackageId Condition="'$(PackageId)' != ''">RabotCrypto.$(PackageId)</PackageId>
-    <PackageId Condition="'$(PackageId)' == ''">RabotCrypto.$(MSBuildProjectName)</PackageId>
-  </PropertyGroup>
 </Project>
