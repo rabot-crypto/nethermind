@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)../packable/ReferencePackageLibraries.props">
+    <None Include="$(MSBuildThisFileDirectory)../packable/ReferencePackageLibraries.props;$(MSBuildThisFileDirectory)../packable/ReferencePackageLibraries.targets">
       <Link>$(MSBuildProjectDirectory)/build/$(MSBuildProjectName)%(Extension)</Link>
       <Pack>true</Pack>
       <PackagePath>
