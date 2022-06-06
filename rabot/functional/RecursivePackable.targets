@@ -1,7 +1,4 @@
-<Project>
-  <Import Project="$(MSBuildThisFileDirectory)Vernuntii.props" />
-  <Import Project="$(MSBuildThisFileDirectory)../tasks/Vernuntii.Package.targets" />
-  
+<Project>  
   <PropertyGroup>
     <PackageId Condition="'$(PackageId)' != ''">RabotCrypto.$(PackageId)</PackageId>
     <PackageId Condition="'$(PackageId)' == ''">RabotCrypto.$(MSBuildProjectName)</PackageId>

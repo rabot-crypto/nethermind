@@ -4,6 +4,8 @@
       <HintPath>%(Identity)</HintPath>
       <!-- Using <Private>false</Private> keeps the dependencies from being copied over. -->
       <Private>false</Private>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Reference>
   </ItemGroup>
 </Project>

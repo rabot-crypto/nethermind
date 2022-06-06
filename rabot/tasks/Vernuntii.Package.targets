@@ -1,8 +1,0 @@
-<Project>
-  <ItemGroup>    
-    <PackageReference Include="Vernuntii.Console.MSBuild" Version="0.1.0-alpha.10">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-</Project>
