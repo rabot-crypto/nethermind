@@ -1,0 +1,36 @@
+<Project>
+  <PropertyGroup>
+    <ExternalProjectDirectory>$(ExternalProjectDirectory)</ExternalProjectDirectory>
+    <ExternalProjectName>$(ExternalProjectName)</ExternalProjectName>
+    <ExternalProjectReference>$(ExternalProjectReference)</ExternalProjectReference>
+  </PropertyGroup>
+
+  <Target Name="ConsumeExternalProjectPackages" BeforeTargets="CollectPackageReferences">
+    <Error Text="The property ExternalProjectDirectory was not set" Condition="'$(ExternalProjectDirectory)' == ''" />
+    <Error Text="The property ExternalProjectDirectory does not end with &quot;/&quot;" Condition="!$(ExternalProjectDirectory.EndsWith('/'))" />
+    <Error Text="The property ExternalProjectName was not set" Condition="'$(ExternalProjectName)' == ''" />
+
+    <PropertyGroup>
+      <_ExternalProjectReference Condition="'$(ExternalProjectReference)' == ''">$(ExternalProjectDirectory)$(ExternalProjectName).csproj</_ExternalProjectReference>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <ExternalProjectPackages>$(MSBuildProjectDirectory)/obj/$(ExternalProjectName).$(MSBuildThisFileName).props</ExternalProjectPackages>
+    </PropertyGroup>
+
+    <MSBuild Projects="$(_ExternalProjectReference)" Targets="Restore" />
+    <Exec Command="dotnet script $(MSBuildThisFileDirectory)../scripts/ImportableExternalPackages/main.csx -- &quot;$(ExternalProjectDirectory)obj/project.assets.json&quot; &quot;$(ExternalProjectPackages)&quot;" />
+
+    <!-- As we can not import dynamically the .props with the packages inside we use this as workaround -->
+    <MSBuild Projects="$(MSBuildThisFileDirectory)OutputImportedPackages.targets" Targets="OutputPackageReferences" Properties="ImportProject=$(ExternalProjectPackages)">
+      <Output TaskParameter="TargetOutputs" ItemName="_ExternalProjectPackageReferences" />
+    </MSBuild>
+
+    <ItemGroup>
+      <PackageReference Include="@(_ExternalProjectPackageReferences)" />
+    </ItemGroup>
+
+    <!-- For debug purpose -->
+    <!-- <Message Importance="High" Text="%(PackageReference.Identity)" /> -->
+  </Target>
+</Project>

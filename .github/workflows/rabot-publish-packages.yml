@@ -1,0 +1,30 @@
+name: Rabot publish packages
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - run: git submodule update --init --recursive
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - run: dotnet tool restore
+        working-directory: ./rabot
+
+      - run: dotnet nuget add source "${{ secrets.SPACE_NUGET_SOURCE }}" --username "${{ secrets.SPACE_NUGET_USERNAME }}" --password "${{ secrets.SPACE_NUGET_PASSWORD}}" --store-password-in-clear-text
+
+      - run: ./scripts/publish-package.sh
+        env:
+          NUGET_SOURCE: ${{ secrets.SPACE_NUGET_SOURCE }}
+        working-directory: ./rabot
+        shell: bash

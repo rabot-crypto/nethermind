@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Db.Rocks/Nethermind.Db.Rocks.csproj">
+      <!-- Prevents this project being listed as package dependency inside built package -->
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <ExternalProjectDirectory>$(MSBuildThisFileDirectory)../../../src/Nethermind/Nethermind.Db.Rocks/</ExternalProjectDirectory>
+    <ExternalProjectName>Nethermind.Db.Rocks</ExternalProjectName>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)../BindablePackage.targets" />
+</Project>
