@@ -16,9 +16,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm/Nethermind.Evm.csproj" /> -->
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm/Nethermind.Evm.csproj" />
     <ProjectReference Include="../../../src/Nethermind/Nethermind.Core.Test/Nethermind.Core.Test.csproj" />
-    <!-- <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm.Test/Nethermind.Evm.Test.csproj" /> -->
   </ItemGroup>
 
   <Target Name="RecursivePack" DependsOnTargets="Restore;Build">
