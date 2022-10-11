@@ -1,0 +1,13 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)Nethermind.Packaging.Shared.props" Condition="'$(NethermindPackagingCommonPropsLoaded)' != 'true'" />
+  <Import Project="$(MSBuildThisFileDirectory)Nethermind.Packaging.targets" Condition="Exists('$(NethermindPackagingTargetsLockFile)')" />
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Remove="Microsoft.NET.Test.Sdk" />
+    <PackageReference Remove="NUnit3TestAdapter" />
+  </ItemGroup>
+</Project>

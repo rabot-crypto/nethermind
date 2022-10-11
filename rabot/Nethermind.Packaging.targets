@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <PackageId Condition="'$(PackageId)' != ''">RabotCrypto.$(PackageId)</PackageId>
+    <PackageId Condition="'$(PackageId)' == ''">RabotCrypto.$(MSBuildProjectName)</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <_ContentDir Include="@(Content->'%(RootDir)%(Directory)'->Distinct())" />
+  </ItemGroup>
+
+  <ItemGroup Condition="@(_ContentDir->Count()) > 0">
+    <_BuildFile Include="$(MSBuildThisFileDirectory)packaging/LinkPackageContent.targets" />
+
+    <Content Update="@(Content)">
+      <Pack>true</Pack>
+      <PackagePath>content/%(RelativeDir)%(Filename)%(Extension)</PackagePath>
+    </Content>
+
+    <None Include="@(_BuildFile)">
+      <Link>$(MSBuildProjectDirectory)/build/$(PackageId)%(Extension)</Link>
+      <Pack>true</Pack>
+      <PackagePath>
+        build/$(PackageId)%(Extension);
+        buildMultiTargeting/$(PackageId)%(Extension);
+        buildTransitive/$(PackageId)%(Extension)
+      </PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
