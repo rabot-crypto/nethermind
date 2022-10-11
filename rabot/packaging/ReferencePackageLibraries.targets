@@ -1,0 +1,10 @@
+<Project>
+  <Target Name="MarkReferencesFromPackageNotCopyable" AfterTargets="ResolveReferences">
+    <ItemGroup>
+      <_ReferenceCopyLocalPathsFromPackageToBePrivate Include="@(ReferenceCopyLocalPaths)" Condition="%(NuGetPackageId) == '$(MSBuildThisFileName)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(_ReferenceCopyLocalPathsFromPackageToBePrivate)" Condition="'@(_ReferenceCopyLocalPathsFromPackageToBePrivate)' != ''" />
+    </ItemGroup>
+  </Target>
+</Project>

@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <NethermindPackagingCommonPropsLoaded>true</NethermindPackagingCommonPropsLoaded>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <NethermindPackagingTargetsLockFile>$(MSBuildThisFileDirectory)Nethermind.Packaging.lock</NethermindPackagingTargetsLockFile>
+  </PropertyGroup>
+</Project>

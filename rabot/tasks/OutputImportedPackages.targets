@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="$(ImportProject)" />
+  <Target Name="OutputPackageReferences" Returns="@(PackageReference)" />
+</Project>

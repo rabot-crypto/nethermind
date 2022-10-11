@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <BindablePackagePropsLoaded>true</BindablePackagePropsLoaded>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <!-- Let set assembly manually to be in-line with nethermind assembly version. -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)../packaging/ReferencePackageLibraries.props;$(MSBuildThisFileDirectory)../packaging/ReferencePackageLibraries.targets">
+      <Link>$(MSBuildProjectDirectory)/build/$(MSBuildProjectName)%(Extension)</Link>
+      <Pack>true</Pack>
+      <PackagePath>
+        build/$(MSBuildProjectName)%(Extension);
+        buildMultiTargeting/$(MSBuildProjectName)%(Extension)
+      </PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

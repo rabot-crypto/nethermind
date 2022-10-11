@@ -1,0 +1,5 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)BindablePackage.props" Condition="'$(BindablePackagePropsLoaded)' != 'true'" />
+  <Import Project="$(MSBuildThisFileDirectory)../tasks/ExternalProjectPackages.targets" />
+  <Import Project="$(MSBuildThisFileDirectory)../tasks/ProjectAssembliesInPackage.targets" />
+</Project>

@@ -1,0 +1,43 @@
+<Project InitialTargets="TouchNethermindPackagingLockFile" DefaultTargets="RecursivePack">
+  <Sdk Name="Microsoft.Build.NoTargets" Version="3.4.0" />
+  <Import Project="$(MSBuildThisFileDirectory)../../Nethermind.Packaging.Shared.props" Condition="'$(NethermindPackagingCommonPropsLoaded)' != 'true'" />
+
+  <Target Name="TouchNethermindPackagingLockFile">
+    <!-- I had to workaround the issue that I was not able to evaluate a condition
+         inside Directory.Build.targets to desired result by passing a property in
+         above MSBuildProperties. I now work with a "lock" file that does not lock
+         but evaluates a condition to the desired result by checking for file
+         existence. -->
+    <Touch Files="$(NethermindPackagingTargetsLockFile)" AlwaysCreate="true" />
+  </Target>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm/Nethermind.Evm.csproj" /> -->
+    <ProjectReference Include="../../../src/Nethermind/Nethermind.Core.Test/Nethermind.Core.Test.csproj" />
+    <!-- <ProjectReference Include="../../../src/Nethermind/Nethermind.Evm.Test/Nethermind.Evm.Test.csproj" /> -->
+  </ItemGroup>
+
+  <Target Name="RecursivePack" DependsOnTargets="Restore;Build">
+    <ItemGroup>
+      <_ProjectToPack Include="%(_RestoreProjectPathItems.Identity)" Exclude="$(MSBuildProjectFullPath)" />
+    </ItemGroup>
+
+    <PropertyGroup>
+      <!-- TreatWarningsAsErrors is here very important! -->
+      <MSBuildProperties>
+        PackageOutputPath=$(PackageOutputPath);
+        TreatWarningsAsErrors=false
+      </MSBuildProperties>
+    </PropertyGroup>
+
+    <MSBuild Projects="%(_ProjectToPack.Identity)" Targets="Pack" Properties="$(MSBuildProperties)" />
+    <Delete Files="$(NethermindPackagingTargetsLockFile)" Condition="Exists($(NethermindPackagingTargetsLockFile))" />
+
+    <!-- <Message Text="%(_ProjectToPack.Identity)" Importance="High" /> -->
+  </Target>
+
+</Project>
