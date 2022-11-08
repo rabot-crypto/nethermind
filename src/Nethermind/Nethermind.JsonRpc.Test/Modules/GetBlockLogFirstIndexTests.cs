@@ -15,11 +15,9 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System.Threading.Tasks;
 using Nethermind.Blockchain.Receipts;
 using Nethermind.Core;
 using Nethermind.Core.Test.Builders;
-using Nethermind.JsonRpc.Modules;
 using NUnit.Framework;
 
 namespace Nethermind.JsonRpc.Test.Modules

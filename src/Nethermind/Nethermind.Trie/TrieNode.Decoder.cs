@@ -17,7 +17,6 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nethermind.Core;
 using Nethermind.Core.Crypto;
 using Nethermind.Serialization.Rlp;
 using Nethermind.Trie.Pruning;

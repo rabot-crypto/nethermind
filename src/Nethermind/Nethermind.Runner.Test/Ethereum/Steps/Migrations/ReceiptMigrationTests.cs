@@ -16,11 +16,9 @@
 
 using System;
 using System.Threading;
-using DotNetty.Transport.Channels;
 using FluentAssertions;
 using Nethermind.Api;
 using Nethermind.Blockchain.Receipts;
-using Nethermind.Blockchain.Synchronization;
 using Nethermind.Config;
 using Nethermind.Core;
 using Nethermind.Core.Crypto;
@@ -28,9 +26,7 @@ using Nethermind.Core.Test.Builders;
 using Nethermind.Db;
 using Nethermind.Init.Steps.Migrations;
 using Nethermind.Logging;
-using Nethermind.Runner.Ethereum.Api;
 using Nethermind.Serialization.Json;
-using Nethermind.State.Repositories;
 using Nethermind.Synchronization;
 using Nethermind.Synchronization.ParallelSync;
 using NSubstitute;

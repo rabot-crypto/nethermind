@@ -22,7 +22,6 @@ using Nethermind.Core.Extensions;
 using Nethermind.Specs;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Evm.Tracing.GethStyle;
-using Nethermind.State;
 using Nethermind.Trie;
 using NUnit.Framework;
 

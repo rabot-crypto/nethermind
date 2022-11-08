@@ -33,7 +33,6 @@ using Nethermind.Network.P2P.EventArg;
 using Nethermind.Network.Rlpx;
 using Nethermind.Stats;
 using Nethermind.Stats.Model;
-using Nethermind.Synchronization.Peers;
 using Timer = System.Timers.Timer;
 
 namespace Nethermind.Network

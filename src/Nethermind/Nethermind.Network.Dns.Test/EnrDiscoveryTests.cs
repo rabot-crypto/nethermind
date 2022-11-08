@@ -1,18 +1,11 @@
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web;
-using DotNetty.Buffers;
 using FluentAssertions;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Crypto;
 using Nethermind.Logging;
 using Nethermind.Network.Enr;
-using Nethermind.Serialization.Rlp;
-using Nethermind.Stats.Model;
-using NSubstitute;
 using NUnit.Framework;
 
 namespace Nethermind.Network.Dns.Test;

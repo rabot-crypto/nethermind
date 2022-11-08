@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using Nethermind.Core.Crypto;
 using Nethermind.State.Snap;
 
 namespace Nethermind.Network.P2P.Subprotocols.Snap.Messages

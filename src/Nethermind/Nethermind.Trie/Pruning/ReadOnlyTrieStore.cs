@@ -16,7 +16,6 @@
 //
 
 using System;
-using System.Reflection.Metadata.Ecma335;
 using Nethermind.Core;
 using Nethermind.Core.Crypto;
 

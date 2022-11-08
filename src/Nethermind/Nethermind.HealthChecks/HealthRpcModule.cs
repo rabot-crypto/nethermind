@@ -16,7 +16,6 @@
 // 
 
 using System.Linq;
-using System.Threading.Tasks;
 using Nethermind.JsonRpc;
 
 namespace Nethermind.HealthChecks

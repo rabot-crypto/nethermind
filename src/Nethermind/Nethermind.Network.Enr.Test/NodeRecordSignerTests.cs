@@ -7,7 +7,6 @@ using Nethermind.Core.Extensions;
 using Nethermind.Crypto;
 using Nethermind.Serialization.Rlp;
 using NUnit.Framework;
-using NUnit.Framework.Internal.Commands;
 
 namespace Nethermind.Network.Enr.Test;
 

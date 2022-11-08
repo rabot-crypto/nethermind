@@ -21,7 +21,6 @@ using Nethermind.Core.Specs;
 using Nethermind.Specs;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Int256;
-using Nethermind.State;
 using NUnit.Framework;
 
 namespace Nethermind.Evm.Test

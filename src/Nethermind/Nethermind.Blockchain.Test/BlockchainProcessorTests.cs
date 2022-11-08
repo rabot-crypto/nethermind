@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using FluentAssertions;
-using Nethermind.Blockchain.Synchronization;
 using Nethermind.Consensus.Processing;
 using Nethermind.Core;
 using Nethermind.Core.Attributes;
@@ -34,7 +33,6 @@ using Nethermind.State.Repositories;
 using Nethermind.Db.Blooms;
 using Nethermind.State;
 using Nethermind.Trie.Pruning;
-using Nethermind.TxPool;
 using NUnit.Framework;
 
 namespace Nethermind.Blockchain.Test

@@ -27,7 +27,6 @@ using Nethermind.Db.Rocks.Config;
 using Nethermind.Db.Rpc;
 using Nethermind.JsonRpc.Client;
 using Nethermind.Logging;
-using Nethermind.Synchronization.ParallelSync;
 
 namespace Nethermind.Init.Steps
 {

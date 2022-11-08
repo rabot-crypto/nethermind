@@ -15,9 +15,7 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 //
 
-using System.Configuration;
 using Nethermind.Core;
-using Nethermind.Core.Crypto;
 
 namespace Nethermind.Synchronization
 {

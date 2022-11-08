@@ -25,7 +25,6 @@ using Nethermind.Core;
 using Nethermind.Logging;
 using Nethermind.Monitoring.Config;
 using Nethermind.Monitoring.Metrics;
-using Nethermind.Runner;
 using NUnit.Framework;
 
 namespace Nethermind.Monitoring.Test

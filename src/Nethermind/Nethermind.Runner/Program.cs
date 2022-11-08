@@ -48,7 +48,6 @@ using Nethermind.Serialization.Json;
 using Nethermind.UPnP.Plugin;
 using NLog;
 using NLog.Config;
-using RocksDbSharp;
 using ILogger = Nethermind.Logging.ILogger;
 
 namespace Nethermind.Runner

@@ -16,7 +16,6 @@
 // 
 
 using System;
-using System.Threading.Tasks;
 using Nethermind.JsonRpc.Data;
 using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.Logging;

@@ -28,8 +28,6 @@ using Nethermind.Serialization.Rlp;
 using Nethermind.Specs;
 using Nethermind.State.Repositories;
 using Nethermind.Db.Blooms;
-using Nethermind.TxPool;
-using NSubstitute;
 using NUnit.Framework;
 
 namespace Nethermind.Blockchain.Test.Visitors

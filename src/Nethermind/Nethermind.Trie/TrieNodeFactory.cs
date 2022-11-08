@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System.Diagnostics;
-using System.Xml.XPath;
 
 namespace Nethermind.Trie
 {

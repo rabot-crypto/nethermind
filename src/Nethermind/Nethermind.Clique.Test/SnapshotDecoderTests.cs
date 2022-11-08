@@ -15,16 +15,10 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System.Collections.Generic;
-using Nethermind.Blockchain;
 using Nethermind.Consensus.Clique;
 using Nethermind.Core;
 using Nethermind.Core.Crypto;
-using Nethermind.Core.Extensions;
-using Nethermind.Specs;
-using Nethermind.Core.Test.Builders;
-using Nethermind.Int256;
 using Nethermind.Serialization.Rlp;
-using Nethermind.Db.Blooms;
 using NUnit.Framework;
 
 namespace Nethermind.Clique.Test

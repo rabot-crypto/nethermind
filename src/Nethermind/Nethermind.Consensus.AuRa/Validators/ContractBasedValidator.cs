@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Nethermind.Abi;
@@ -24,15 +23,9 @@ using Nethermind.Blockchain.Find;
 using Nethermind.Blockchain.Receipts;
 using Nethermind.Consensus.AuRa.Contracts;
 using Nethermind.Consensus.Processing;
-using Nethermind.Consensus.Transactions;
 using Nethermind.Core;
 using Nethermind.Core.Crypto;
-using Nethermind.Evm;
-using Nethermind.Evm.Tracing;
 using Nethermind.Logging;
-using Nethermind.Specs.ChainSpecStyle;
-using Nethermind.State;
-using Nethermind.Db.Blooms;
 
 namespace Nethermind.Consensus.AuRa.Validators
 {

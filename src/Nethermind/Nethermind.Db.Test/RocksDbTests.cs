@@ -1,7 +1,5 @@
-using System.Reflection;
 using Nethermind.Db.Rocks;
 using NUnit.Framework;
-using RocksDbSharp;
 
 namespace Nethermind.Db.Test;
 

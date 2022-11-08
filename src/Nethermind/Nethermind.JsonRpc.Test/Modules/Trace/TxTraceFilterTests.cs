@@ -16,11 +16,8 @@
 // 
 
 using Nethermind.Core.Test.Builders;
-using Nethermind.Evm.Tracing;
 using Nethermind.Evm.Tracing.ParityStyle;
 using Nethermind.JsonRpc.Modules.Trace;
-using Nethermind.Logging;
-using Nethermind.Specs;
 using NUnit.Framework;
 
 namespace Nethermind.JsonRpc.Test.Modules.Trace;

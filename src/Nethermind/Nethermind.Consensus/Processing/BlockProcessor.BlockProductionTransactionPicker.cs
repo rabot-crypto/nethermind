@@ -21,8 +21,6 @@ using Nethermind.Core;
 using Nethermind.Core.Specs;
 using Nethermind.Evm;
 using Nethermind.Int256;
-using Nethermind.Logging;
-using Nethermind.Specs;
 using Nethermind.State;
 
 namespace Nethermind.Consensus.Processing

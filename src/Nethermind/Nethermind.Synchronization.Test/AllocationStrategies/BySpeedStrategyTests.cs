@@ -1,14 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Security.Cryptography.X509Certificates;
 using FluentAssertions;
 using Nethermind.Blockchain.Synchronization;
-using Nethermind.Core.Crypto;
 using Nethermind.Core.Extensions;
 using Nethermind.Core.Test.Builders;
-using Nethermind.Crypto;
-using Nethermind.Overseer.Test.JsonRpc.Dto;
 using Nethermind.Stats;
 using Nethermind.Stats.Model;
 using Nethermind.Synchronization.Peers;

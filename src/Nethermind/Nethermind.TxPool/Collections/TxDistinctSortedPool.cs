@@ -17,11 +17,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Nethermind.Core;
 using Nethermind.Core.Collections;
 using Nethermind.Core.Crypto;
-using Nethermind.Core.Resettables;
 using Nethermind.Logging;
 using Nethermind.TxPool.Comparison;
 

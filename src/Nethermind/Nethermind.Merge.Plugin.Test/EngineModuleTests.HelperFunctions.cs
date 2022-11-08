@@ -16,12 +16,9 @@
 //
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using System.Threading.Tasks;
-using FluentAssertions;
 using Nethermind.Blockchain;
 using Nethermind.Blockchain.Find;
 using Nethermind.Core;
@@ -35,7 +32,6 @@ using Nethermind.Int256;
 using Nethermind.JsonRpc.Test.Modules;
 using Nethermind.Specs;
 using Nethermind.Specs.Forks;
-using Nethermind.JsonRpc;
 using Nethermind.Merge.Plugin.Data.V1;
 using Nethermind.State;
 

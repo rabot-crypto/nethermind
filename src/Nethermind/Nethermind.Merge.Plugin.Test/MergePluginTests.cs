@@ -16,27 +16,22 @@
 //
 
 using System;
-using System.Collections;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Nethermind.Api;
 using Nethermind.Blockchain.Synchronization;
-using Nethermind.Config;
 using Nethermind.Consensus;
 using Nethermind.Consensus.Clique;
 using Nethermind.Consensus.Producers;
 using Nethermind.Core;
 using Nethermind.Core.Exceptions;
-using Nethermind.Core.Test.Builders;
 using Nethermind.Db;
 using Nethermind.JsonRpc;
 using Nethermind.JsonRpc.Modules;
 using Nethermind.Merge.Plugin.BlockProduction;
-using Nethermind.Merge.Plugin.Handlers;
 using Nethermind.Specs.ChainSpecStyle;
 using NUnit.Framework;
 using NSubstitute;
-using NUnit.Framework.Constraints;
 using Build = Nethermind.Runner.Test.Ethereum.Build;
 
 namespace Nethermind.Merge.Plugin.Test

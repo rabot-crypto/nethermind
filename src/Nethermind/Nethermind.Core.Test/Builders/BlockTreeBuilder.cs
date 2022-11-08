@@ -30,8 +30,6 @@ using Nethermind.Serialization.Rlp;
 using Nethermind.State.Proofs;
 using Nethermind.State.Repositories;
 using Nethermind.Db.Blooms;
-using Nethermind.Specs.Forks;
-using Nethermind.TxPool;
 using NSubstitute;
 using NUnit.Framework;
 

@@ -15,15 +15,10 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using Nethermind.Abi;
 using Nethermind.Blockchain.Contracts;
-using Nethermind.Blockchain.Contracts.Json;
 using Nethermind.Core;
-using Nethermind.Int256;
-using Nethermind.Evm;
 using Nethermind.State;
-using Nethermind.Blockchain.Find;
 using Nethermind.Evm.TransactionProcessing;
 using Nethermind.Facade;
 

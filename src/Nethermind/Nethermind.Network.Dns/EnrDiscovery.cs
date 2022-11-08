@@ -15,12 +15,10 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System.Buffers.Text;
 using System.Net;
 using DnsClient;
 using DotNetty.Buffers;
 using Nethermind.Core.Crypto;
-using Nethermind.Crypto;
 using Nethermind.Logging;
 using Nethermind.Network.Enr;
 using Nethermind.Stats.Model;

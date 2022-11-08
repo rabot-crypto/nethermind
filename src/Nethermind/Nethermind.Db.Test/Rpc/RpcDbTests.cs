@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System.Linq;
-using FluentAssertions;
 using Nethermind.Core.Extensions;
 using Nethermind.Db.Rpc;
 using Nethermind.JsonRpc;

@@ -15,9 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System.Threading.Tasks;
-using Nethermind.Core;
-using Nethermind.Core.Crypto;
-using Nethermind.Int256;
 using Nethermind.Facade.Proxy.Models;
 
 namespace Nethermind.Facade.Proxy

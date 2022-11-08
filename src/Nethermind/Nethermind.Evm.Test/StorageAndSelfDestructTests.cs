@@ -25,7 +25,6 @@ using Nethermind.Evm.Tracing.ParityStyle;
 using Nethermind.Logging;
 using Nethermind.Specs;
 using Nethermind.Specs.Forks;
-using Nethermind.State;
 using NUnit.Framework;
 
 namespace Nethermind.Evm.Test

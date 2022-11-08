@@ -20,7 +20,6 @@ using Nethermind.Logging;
 using NUnit.Framework;
 using Nethermind.Specs.ChainSpecStyle;
 using Nethermind.Serialization.Json;
-using NSubstitute.ExceptionExtensions;
 
 namespace Nethermind.Runner.Test
 {

@@ -19,7 +19,6 @@ using Nethermind.Blockchain;
 using Nethermind.Consensus.Processing;
 using Nethermind.Core;
 using Nethermind.Logging;
-using Nethermind.Specs.ChainSpecStyle;
 
 namespace Nethermind.Consensus.AuRa.Validators
 {

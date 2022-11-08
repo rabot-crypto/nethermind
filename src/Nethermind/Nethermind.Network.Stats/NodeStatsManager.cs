@@ -17,10 +17,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Timers;
-using Nethermind.Core.Caching;
 using Nethermind.Core.Timers;
 using Nethermind.Logging;
 using Nethermind.Stats.Model;

@@ -14,21 +14,9 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
-using System;
 using FluentAssertions;
-using Nethermind.Core;
-using Nethermind.Core.Crypto;
-using Nethermind.Core.Extensions;
 using Nethermind.Specs;
-using Nethermind.Core.Test.Builders;
-using Nethermind.Evm.Tracing.GethStyle;
-using Nethermind.State;
-using Nethermind.Trie;
 using NUnit.Framework;
-using FluentAssertions.Execution;
-using Nethermind.Core.Specs;
-using NSubstitute;
-using Nethermind.Specs.Forks;
 
 namespace Nethermind.Evm.Test
 {

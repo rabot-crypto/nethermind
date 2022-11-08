@@ -15,9 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using Nethermind.Consensus.AuRa.Contracts;
 using Nethermind.Core;
 
 namespace Nethermind.Consensus.AuRa

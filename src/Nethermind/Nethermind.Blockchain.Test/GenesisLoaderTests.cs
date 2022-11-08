@@ -19,7 +19,6 @@ using System.IO;
 using Nethermind.Core;
 using Nethermind.Core.Specs;
 using Nethermind.Db;
-using Nethermind.Evm;
 using Nethermind.Evm.TransactionProcessing;
 using Nethermind.Logging;
 using Nethermind.Serialization.Json;

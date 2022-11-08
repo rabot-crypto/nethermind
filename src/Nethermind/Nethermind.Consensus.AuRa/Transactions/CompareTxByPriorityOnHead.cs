@@ -16,13 +16,10 @@
 // 
 
 using System;
-using System.Linq;
-using System.Threading;
 using Nethermind.Blockchain;
 using Nethermind.Consensus.AuRa.Contracts;
 using Nethermind.Consensus.AuRa.Contracts.DataStore;
 using Nethermind.Core;
-using Nethermind.Int256;
 
 namespace Nethermind.Consensus.AuRa.Transactions
 {

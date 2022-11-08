@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Linq;
 using Nethermind.Blockchain;
 using Nethermind.Blockchain.Find;
 using Nethermind.Blockchain.Receipts;
@@ -41,11 +40,7 @@ using Nethermind.TxPool;
 using NUnit.Framework;
 using System.Threading.Tasks;
 using Nethermind.Consensus.Processing;
-using Nethermind.Evm.Tracing;
-using Nethermind.Facade;
-using Nethermind.JsonRpc.Modules;
 using NSubstitute;
-using NSubstitute.Core.DependencyInjection;
 
 namespace Nethermind.JsonRpc.Test.Modules.Proof
 {

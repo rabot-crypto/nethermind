@@ -16,7 +16,6 @@
 
 using System;
 using System.Linq;
-using System.Runtime.Caching;
 using System.Security;
 using Nethermind.Core;
 using Nethermind.Core.Caching;

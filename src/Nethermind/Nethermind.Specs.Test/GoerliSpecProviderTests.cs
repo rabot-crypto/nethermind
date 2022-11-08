@@ -17,7 +17,6 @@
 
 using FluentAssertions;
 using Nethermind.Core.Specs;
-using Nethermind.Specs.Forks;
 using NUnit.Framework;
 
 namespace Nethermind.Specs.Test

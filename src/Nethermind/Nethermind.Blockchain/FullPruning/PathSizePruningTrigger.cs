@@ -17,10 +17,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
-using System.Threading;
 using Nethermind.Core.Timers;
 
 namespace Nethermind.Blockchain.FullPruning

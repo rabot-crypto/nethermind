@@ -17,7 +17,6 @@
 
 using Nethermind.Consensus;
 using Nethermind.Core;
-using Nethermind.Merge.Plugin.InvalidChainTracker;
 
 namespace Nethermind.Merge.Plugin;
 

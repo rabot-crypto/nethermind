@@ -16,7 +16,6 @@
 // 
 
 using System;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Network.P2P;
 using Nethermind.Network.P2P.Subprotocols.Snap.Messages;

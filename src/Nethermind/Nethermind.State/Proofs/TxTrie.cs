@@ -17,8 +17,6 @@
 using System;
 using System.Collections.Generic;
 using Nethermind.Core;
-using Nethermind.Core.Extensions;
-using Nethermind.Core.Specs;
 using Nethermind.Db;
 using Nethermind.Logging;
 using Nethermind.Serialization.Rlp;

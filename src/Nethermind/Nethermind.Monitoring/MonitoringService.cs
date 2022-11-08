@@ -21,8 +21,6 @@ using Nethermind.Logging;
 using Nethermind.Monitoring.Metrics;
 using Prometheus;
 using Nethermind.Monitoring.Config;
-using System.Net.Http;
-using System.IO;
 using System.Net.Sockets;
 
 namespace Nethermind.Monitoring

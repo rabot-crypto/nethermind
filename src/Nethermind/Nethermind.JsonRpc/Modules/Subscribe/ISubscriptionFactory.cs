@@ -16,7 +16,6 @@
 // 
 
 using System;
-using Nethermind.JsonRpc.Modules.Eth;
 
 namespace Nethermind.JsonRpc.Modules.Subscribe
 {

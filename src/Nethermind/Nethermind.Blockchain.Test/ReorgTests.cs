@@ -16,10 +16,8 @@
 //
 
 using System.Collections.Generic;
-using System.Threading;
 using FluentAssertions;
 using Nethermind.Blockchain.Receipts;
-using Nethermind.Blockchain.Spec;
 using Nethermind.Blockchain.Synchronization;
 using Nethermind.Consensus.Comparers;
 using Nethermind.Consensus.Processing;
@@ -32,7 +30,6 @@ using Nethermind.Crypto;
 using Nethermind.Db;
 using Nethermind.Db.Blooms;
 using Nethermind.Evm;
-using Nethermind.Evm.Tracing;
 using Nethermind.Evm.TransactionProcessing;
 using Nethermind.Logging;
 using Nethermind.Specs;
@@ -41,7 +38,6 @@ using Nethermind.State.Repositories;
 using Nethermind.State.Witnesses;
 using Nethermind.Trie.Pruning;
 using Nethermind.TxPool;
-using NSubstitute;
 using NUnit.Framework;
 
 namespace Nethermind.Blockchain.Test

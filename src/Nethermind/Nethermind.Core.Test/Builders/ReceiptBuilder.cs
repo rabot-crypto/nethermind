@@ -16,7 +16,6 @@
 
 using System;
 using Nethermind.Core.Crypto;
-using Nethermind.Int256;
 
 namespace Nethermind.Core.Test.Builders
 {

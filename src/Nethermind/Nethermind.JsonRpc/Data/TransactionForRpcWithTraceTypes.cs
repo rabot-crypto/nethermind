@@ -15,10 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-
 namespace Nethermind.JsonRpc.Data
 {
     public class TransactionForRpcWithTraceTypes

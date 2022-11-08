@@ -19,10 +19,8 @@ using Nethermind.Blockchain;
 using Nethermind.Blockchain.Synchronization;
 using Nethermind.Core;
 using Nethermind.Crypto;
-using Nethermind.Db;
 using Nethermind.Logging;
 using Nethermind.Merge.Plugin.Handlers;
-using Nethermind.Serialization.Rlp;
 using Nethermind.Synchronization;
 
 namespace Nethermind.Merge.Plugin.Synchronization

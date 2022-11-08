@@ -15,10 +15,8 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using Nethermind.Blockchain.Synchronization;
 using Nethermind.Config;
 using Nethermind.Core;
-using Nethermind.Network;
 using Nethermind.Synchronization;
 
 namespace Nethermind.JsonRpc.Modules.Net

@@ -41,10 +41,8 @@ using Nethermind.Evm;
 using Nethermind.Serialization.Json;
 using Nethermind.Specs.Forks;
 using Nethermind.Specs.Test;
-using Nethermind.Evm.TransactionProcessing;
 using Nethermind.JsonRpc.Data;
 using Nethermind.JsonRpc.Modules;
-using Nethermind.Serialization.Json;
 
 namespace Nethermind.JsonRpc.Test.Modules
 {

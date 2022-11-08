@@ -17,7 +17,6 @@
 
 using System;
 using Nethermind.Blockchain;
-using Nethermind.Blockchain.Find;
 using Nethermind.Blockchain.Synchronization;
 using Nethermind.Core;
 using Nethermind.Core.Crypto;
@@ -26,7 +25,6 @@ using Nethermind.Consensus;
 using Nethermind.Core.Specs;
 using Nethermind.Db;
 using Nethermind.Logging;
-using Nethermind.Merge.Plugin.Handlers;
 using Nethermind.Serialization.Rlp;
 
 namespace Nethermind.Merge.Plugin

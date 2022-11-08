@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using Nethermind.Blockchain;
 using Nethermind.Blockchain.Find;
 using Nethermind.JsonRpc;
 using Nethermind.Merge.Plugin.Data;

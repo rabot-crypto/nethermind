@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System.Threading.Tasks;
-using Grpc.Core.Logging;
 using Nethermind.Api;
 using Nethermind.Api.Extensions;
 using Nethermind.Core;

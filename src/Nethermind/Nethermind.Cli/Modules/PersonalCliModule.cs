@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using Jint.Native;
-using Nethermind.JsonRpc.Data;
 
 namespace Nethermind.Cli.Modules
 {

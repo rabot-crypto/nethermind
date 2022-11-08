@@ -15,15 +15,12 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using Nethermind.Api;
-using Nethermind.Config;
 using Nethermind.Consensus.AuRa.Contracts;
 using Nethermind.Consensus.AuRa.Transactions;
 using Nethermind.Consensus.AuRa.Validators;
 using Nethermind.Core.Caching;
 using Nethermind.Core.Crypto;
 using Nethermind.Int256;
-using Nethermind.Logging;
-using Nethermind.Serialization.Json;
 
 namespace Nethermind.Consensus.AuRa.InitializationSteps
 {

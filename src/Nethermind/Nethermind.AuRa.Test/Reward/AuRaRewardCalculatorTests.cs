@@ -26,7 +26,6 @@ using Nethermind.Core;
 using Nethermind.Core.Test;
 using Nethermind.Specs.ChainSpecStyle;
 using Nethermind.Core.Test.Builders;
-using Nethermind.Evm;
 using Nethermind.Evm.Tracing;
 using Nethermind.Evm.TransactionProcessing;
 using Nethermind.Int256;

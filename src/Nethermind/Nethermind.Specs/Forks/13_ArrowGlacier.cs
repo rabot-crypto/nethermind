@@ -16,9 +16,7 @@
 // 
 
 using System.Threading;
-using Nethermind.Core;
 using Nethermind.Core.Specs;
-using Nethermind.Int256;
 
 namespace Nethermind.Specs.Forks
 {

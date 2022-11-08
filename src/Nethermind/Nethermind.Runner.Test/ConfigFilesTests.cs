@@ -15,19 +15,15 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using FluentAssertions;
 using Nethermind.Analytics;
 using Nethermind.Api;
 using Nethermind.Blockchain.Synchronization;
-using Nethermind.Config;
 using Nethermind.Config.Test;
-using Nethermind.Core;
 using Nethermind.EthStats;
 using Nethermind.Grpc;
 using Nethermind.JsonRpc;
@@ -37,7 +33,6 @@ using Nethermind.Db.Blooms;
 using Nethermind.Db.Rocks.Config;
 using Nethermind.Init;
 using Nethermind.Logging;
-using Nethermind.Merge.Plugin;
 using Nethermind.TxPool;
 using NUnit.Framework;
 

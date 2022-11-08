@@ -15,16 +15,12 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System.Net;
 using System.Text;
 using DotNetty.Buffers;
 using DotNetty.Codecs.Base64;
 using DotNetty.Common.Utilities;
-using Nethermind.Core.Crypto;
 using Nethermind.Network.Enr;
 using Nethermind.Network.P2P;
-using Nethermind.Serialization.Rlp;
-using Nethermind.Stats.Model;
 
 namespace Nethermind.Network.Dns;
 

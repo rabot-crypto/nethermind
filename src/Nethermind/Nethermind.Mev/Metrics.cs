@@ -16,7 +16,6 @@
 // 
 
 using System.ComponentModel;
-using Nethermind.Int256;
 
 namespace Nethermind.Mev
 {

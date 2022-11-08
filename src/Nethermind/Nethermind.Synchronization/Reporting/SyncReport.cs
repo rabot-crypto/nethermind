@@ -16,7 +16,6 @@
 
 using System;
 using System.Text;
-using System.Timers;
 using Nethermind.Blockchain.Synchronization;
 using Nethermind.Core;
 using Nethermind.Core.Timers;

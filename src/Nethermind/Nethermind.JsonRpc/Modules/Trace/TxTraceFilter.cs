@@ -18,10 +18,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Nethermind.Core;
-using Nethermind.Core.Specs;
-using Nethermind.Crypto;
 using Nethermind.Evm.Tracing.ParityStyle;
-using Nethermind.Logging;
 
 namespace Nethermind.JsonRpc.Modules.Trace
 {

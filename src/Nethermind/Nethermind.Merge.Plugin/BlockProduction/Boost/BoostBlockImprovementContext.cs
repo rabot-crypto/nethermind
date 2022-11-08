@@ -16,14 +16,12 @@
 //
 
 using System;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Nethermind.Consensus.Producers;
 using Nethermind.Core;
 using Nethermind.Core.Extensions;
 using Nethermind.Evm.Tracing;
-using Nethermind.Facade.Proxy;
 using Nethermind.Int256;
 using Nethermind.Merge.Plugin.Data.V1;
 using Nethermind.State;

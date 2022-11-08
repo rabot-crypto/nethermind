@@ -43,12 +43,9 @@ using Nethermind.State;
 using Nethermind.State.Repositories;
 using Nethermind.Db.Blooms;
 using Nethermind.Evm.TransactionProcessing;
-using Nethermind.Synchronization.FastSync;
 using Nethermind.Specs.Test;
-using Nethermind.Trie;
 using Nethermind.Trie.Pruning;
 using Nethermind.TxPool;
-using NUnit.Framework;
 using BlockTree = Nethermind.Blockchain.BlockTree;
 
 namespace Nethermind.Core.Test.Blockchain

@@ -15,7 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
@@ -25,11 +24,9 @@ using Nethermind.Blockchain.Receipts;
 using Nethermind.Core;
 using Nethermind.Core.Specs;
 using Nethermind.Core.Test.Builders;
-using Nethermind.Facade;
 using Nethermind.Int256;
 using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.JsonRpc.Modules.Eth.FeeHistory;
-using Nethermind.Logging;
 using NSubstitute;
 using NUnit.Framework;
 using static Nethermind.JsonRpc.Test.Modules.GasPriceOracleTests;

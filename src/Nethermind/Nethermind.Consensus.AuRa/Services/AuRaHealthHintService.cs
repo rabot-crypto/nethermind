@@ -16,7 +16,6 @@
 // 
 
 using System;
-using Nethermind.Blockchain;
 using Nethermind.Blockchain.Services;
 using Nethermind.Consensus.AuRa.Validators;
 

@@ -16,7 +16,6 @@
 // 
 
 using System;
-using Nethermind.Core.Crypto;
 
 namespace Nethermind.Mev.Data
 {

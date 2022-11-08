@@ -15,9 +15,6 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 // 
 
-using System.Collections.Generic;
-using Nethermind.JsonRpc.Modules.Eth;
-
 namespace Nethermind.JsonRpc.Modules.Subscribe
 {
     public interface ISubscriptionManager

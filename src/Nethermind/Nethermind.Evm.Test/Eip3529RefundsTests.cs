@@ -16,20 +16,14 @@
 // 
 
 using System;
-using FluentAssertions;
 using Nethermind.Core;
-using Nethermind.Core.Crypto;
 using Nethermind.Core.Extensions;
 using Nethermind.Core.Specs;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Crypto;
-using Nethermind.Evm.Tracing;
-using Nethermind.Evm.Tracing.GethStyle;
 using Nethermind.Evm.Tracing.ParityStyle;
 using Nethermind.Evm.TransactionProcessing;
 using Nethermind.Logging;
-using Nethermind.Serialization.Json;
-using Nethermind.Specs;
 using Nethermind.Specs.Forks;
 using NSubstitute;
 using NUnit.Framework;

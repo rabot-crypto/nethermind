@@ -25,7 +25,6 @@ using Nethermind.Core.Crypto;
 using Nethermind.Crypto;
 using Nethermind.Int256;
 using Nethermind.Logging;
-using NSubstitute;
 using NUnit.Framework;
 
 namespace Nethermind.Mining.Test

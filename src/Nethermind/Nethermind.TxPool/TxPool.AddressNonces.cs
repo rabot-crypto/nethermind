@@ -16,7 +16,6 @@
 //
 
 using System.Collections.Concurrent;
-using System.Linq;
 using System.Threading;
 using Nethermind.Int256;
 

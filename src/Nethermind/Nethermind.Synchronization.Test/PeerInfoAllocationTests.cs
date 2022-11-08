@@ -20,7 +20,6 @@ using System;
 using System.Collections;
 using FluentAssertions;
 using Nethermind.Blockchain.Synchronization;
-using Nethermind.Network;
 using Nethermind.Stats.Model;
 using Nethermind.Synchronization.Peers;
 using NSubstitute;

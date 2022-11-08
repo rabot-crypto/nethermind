@@ -16,11 +16,9 @@
 // 
 
 using System;
-using System.Threading.Tasks;
 using Nethermind.Blockchain;
 using Nethermind.Core;
 using Nethermind.Facade.Eth;
-using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.Logging;
 
 namespace Nethermind.JsonRpc.Modules.Subscribe

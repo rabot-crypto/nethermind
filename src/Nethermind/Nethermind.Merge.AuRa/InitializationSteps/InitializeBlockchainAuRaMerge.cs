@@ -1,12 +1,7 @@
-using System.Collections.Generic;
-using Nethermind;
 using Nethermind.Consensus.AuRa;
 using Nethermind.Consensus.AuRa.InitializationSteps;
 using Nethermind.Consensus.Processing;
-using Nethermind.Core;
 using Nethermind.Init.Steps;
-using Nethermind.Consensus.AuRa.Validators;
-using Nethermind.Consensus.AuRa.Transactions;
 using Nethermind.Consensus.Transactions;
 
 namespace Nethermind.Merge.AuRa.InitializationSteps

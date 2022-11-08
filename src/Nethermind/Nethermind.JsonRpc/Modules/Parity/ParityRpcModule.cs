@@ -24,7 +24,6 @@ using Nethermind.Consensus;
 using Nethermind.Core;
 using Nethermind.Core.Specs;
 using Nethermind.Crypto;
-using Nethermind.Int256;
 using Nethermind.JsonRpc.Data;
 using Nethermind.KeyStore;
 using Nethermind.Serialization.Rlp;

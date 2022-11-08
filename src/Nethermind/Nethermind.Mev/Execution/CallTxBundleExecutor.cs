@@ -16,7 +16,6 @@
 // 
 
 using System.Linq;
-using System.Text;
 using Nethermind.Consensus;
 using Nethermind.Core.Specs;
 using Nethermind.Evm;

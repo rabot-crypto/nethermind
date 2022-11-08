@@ -1,8 +1,5 @@
-using System.Net;
-using MathGmp.Native;
 using Nethermind.Api;
 using Nethermind.Api.Extensions;
-using Nethermind.Core;
 using Nethermind.Core.Extensions;
 using Nethermind.Logging;
 using Nethermind.Network.Config;

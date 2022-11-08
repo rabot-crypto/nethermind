@@ -16,12 +16,9 @@
 //
 
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 using Nethermind.Consensus.Producers;
 using Nethermind.Core;
-using Nethermind.Core.Extensions;
-using Nethermind.Evm.Tracing;
 using Nethermind.Merge.Plugin.BlockProduction;
 
 namespace Nethermind.Merge.Plugin.Test;

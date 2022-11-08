@@ -16,7 +16,6 @@
 
 using Nethermind.Consensus.Rewards;
 using Nethermind.Core;
-using Nethermind.Core.Specs;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Specs;
 using NUnit.Framework;

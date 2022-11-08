@@ -17,7 +17,6 @@
 using System;
 using FluentAssertions;
 using Nethermind.Core.Caching;
-using Nethermind.Core.Crypto;
 using Nethermind.Core.Test.Builders;
 using Nethermind.Int256;
 using NUnit.Framework;

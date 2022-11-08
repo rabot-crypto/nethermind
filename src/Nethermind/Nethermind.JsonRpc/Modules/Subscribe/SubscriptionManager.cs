@@ -18,7 +18,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.Logging;
 
 namespace Nethermind.JsonRpc.Modules.Subscribe

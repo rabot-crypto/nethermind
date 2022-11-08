@@ -17,7 +17,6 @@
 
 using FluentAssertions;
 using Nethermind.Core.Test.Builders;
-using Nethermind.Merge.Plugin.Data;
 using Nethermind.Merge.Plugin.Data.V1;
 using Nethermind.Serialization.Json;
 using NUnit.Framework;

@@ -14,17 +14,10 @@
 //  You should have received a copy of the GNU Lesser General Public License
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 
-using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
-using Nethermind.Core;
-using Nethermind.Core.Crypto;
-using Nethermind.Core.Extensions;
-using Nethermind.JsonRpc.Data;
-using Nethermind.JsonRpc.Modules.Eth;
 using Nethermind.Overseer.Test.Framework;
-using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace Nethermind.Overseer.Test

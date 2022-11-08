@@ -19,15 +19,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Linq;
 using Nethermind.Blockchain;
 using Nethermind.Logging;
-using Nethermind.State.Snap;
 using Nethermind.Synchronization.ParallelSync;
 using Nethermind.Synchronization.Peers;
-using Nethermind.Core.Crypto;
-using System.Collections.Concurrent;
-using System.Runtime.InteropServices;
 
 namespace Nethermind.Synchronization.SnapSync
 {

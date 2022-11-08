@@ -15,9 +15,7 @@
 //  along with the Nethermind. If not, see <http://www.gnu.org/licenses/>.
 //
 
-using Nethermind.Blockchain.Synchronization;
 using Nethermind.Consensus;
-using Nethermind.Core;
 using Nethermind.Int256;
 using Nethermind.Logging;
 using Nethermind.Merge.Plugin.Synchronization;
